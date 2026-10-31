@@ -27,7 +27,7 @@ Scam types covered: OTP/PIN theft, fake KYC & account-block, UPI collect/QR tric
 
 ## Quick start
 ```bash
-git clone https://github.com/<you>/suraksha-saathi && cd suraksha-saathi
+git clone https://github.com/dharshand676-ui/suraksha-saathi && cd suraksha-saathi
 python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python app.py                                         # open http://localhost:8000
