@@ -1,0 +1,42 @@
+[
+ {
+  "text": "Dear customer your SBI account will be blocked today. Update KYC now http://sbi-kyc-update.xyz/login",
+  "expected": "SCAM"
+ },
+ {
+  "text": "Aapka account band ho jayega. Turant OTP batao warna khata block.",
+  "expected": "SCAM"
+ },
+ {
+  "text": "This is CBI. A warrant is issued against you. You are under digital arrest, stay on video call.",
+  "expected": "SCAM"
+ },
+ {
+  "text": "Congratulations! You have won a lottery of Rs 25 lakh. Pay processing fee Rs 2000 to claim your prize.",
+  "expected": "SCAM"
+ },
+ {
+  "text": "Install AnyDesk and share the 9 digit code so we can refund your money.",
+  "expected": "SCAM"
+ },
+ {
+  "text": "Work from home part-time job earn Rs 3000 per day. Registration fee Rs 500 refundable.",
+  "expected": "SCAM"
+ },
+ {
+  "text": "Hi, are you coming for dinner tonight? Mom made paneer.",
+  "expected": "LIKELY_SAFE"
+ },
+ {
+  "text": "Your OTP for login is 482913. Do not share it with anyone. -HDFC Bank",
+  "expected": "LIKELY_SAFE"
+ },
+ {
+  "text": "Meeting moved to 4pm tomorrow, see agenda at https://www.incometax.gov.in/iec/foportal",
+  "expected": "LIKELY_SAFE"
+ },
+ {
+  "text": "Happy birthday bhai! Party on Saturday.",
+  "expected": "LIKELY_SAFE"
+ }
+]

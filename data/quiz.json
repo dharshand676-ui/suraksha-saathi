@@ -1,0 +1,17 @@
+[
+{"q":{"en":"A caller says he is from your bank and needs the OTP to 'save' your account. What do you do?","hi":"एक कॉलर खुद को बैंक का बताकर खाता 'बचाने' के लिए OTP माँगता है। आप क्या करेंगे?"},
+ "options":{"en":["Share the OTP quickly","Hang up and call the bank's official number","Ask him to call again"],"hi":["जल्दी से OTP बता दूँ","फोन काटकर बैंक के आधिकारिक नंबर पर कॉल करूँ","उसे दोबारा कॉल करने को कहूँ"]},
+ "answer":1,"why":{"en":"Banks never ask for OTP. Always call the number on your card or passbook.","hi":"बैंक कभी OTP नहीं माँगता। हमेशा कार्ड या पासबुक पर छपे नंबर पर कॉल करें।"}},
+{"q":{"en":"You get a UPI 'collect request' saying you will receive Rs 5,000 if you enter your PIN. This is…","hi":"UPI 'कलेक्ट रिक्वेस्ट' कहती है कि PIN डालने पर आपको ₹5,000 मिलेंगे। यह…"},
+ "options":{"en":["A genuine refund","A scam – PIN is only for sending money","A bank offer"],"hi":["असली रिफ़ंड है","ठगी है – PIN सिर्फ़ पैसे भेजने के लिए होता है","बैंक का ऑफ़र है"]},
+ "answer":1,"why":{"en":"You never enter a PIN to receive money.","hi":"पैसे पाने के लिए PIN कभी नहीं डालना पड़ता।"}},
+{"q":{"en":"'This is CBI. You are under digital arrest. Stay on video call and pay a fine.' What is true?","hi":"'हम CBI से हैं। आप डिजिटल अरेस्ट में हैं। वीडियो कॉल पर रहें और जुर्माना भरें।' सच क्या है?"},
+ "options":{"en":["Digital arrest is a real legal process","It is a scam; no agency arrests or collects money over video call","Pay to avoid jail"],"hi":["डिजिटल अरेस्ट असली कानूनी प्रक्रिया है","यह ठगी है; कोई एजेंसी वीडियो कॉल पर गिरफ्तारी या वसूली नहीं करती","जेल से बचने के लिए पैसे भर दूँ"]},
+ "answer":1,"why":{"en":"Disconnect and call 1930 or the local police.","hi":"कॉल काटें और 1930 या स्थानीय पुलिस को बताएं।"}},
+{"q":{"en":"A WhatsApp job offer: 'Earn Rs 3,000 daily by liking videos. Pay Rs 500 registration.' What is the red flag?","hi":"WhatsApp नौकरी ऑफ़र: 'वीडियो लाइक करके रोज़ ₹3,000 कमाएं। ₹500 रजिस्ट्रेशन भरें।' ख़तरे की निशानी क्या है?"},
+ "options":{"en":["Daily pay","Paying money upfront to get a job","Video work"],"hi":["रोज़ की कमाई","नौकरी पाने के लिए पहले पैसे भरना","वीडियो का काम"]},
+ "answer":1,"why":{"en":"Real employers never charge you to hire you.","hi":"असली नियोक्ता नौकरी देने के लिए पैसे नहीं लेते।"}},
+{"q":{"en":"Your money was stolen in a UPI fraud. Which is the FIRST thing to do?","hi":"UPI ठगी में आपके पैसे कट गए। सबसे पहले क्या करें?"},
+ "options":{"en":["Wait a week","Call 1930 immediately","Post on social media"],"hi":["एक हफ़्ता इंतज़ार करें","तुरंत 1930 पर कॉल करें","सोशल मीडिया पर लिखें"]},
+ "answer":1,"why":{"en":"Reporting within the first hour ('golden hour') gives the best chance of freezing the money.","hi":"पहले घंटे ('गोल्डन आवर') में शिकायत से पैसे रुकने की सबसे ज़्यादा संभावना होती है।"}}
+]

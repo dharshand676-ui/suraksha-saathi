@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Suraksha Saathi – Voice-first scam shield</title>
+<meta name="theme-color" content="#14213D">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mark" aria-hidden="true">🛡️</span>
+    <div><h1>Suraksha Saathi</h1><p data-i="tag">Check before you click, share or pay.</p></div></div>
+  <button id="langBtn" class="lang" aria-label="Change language">हिंदी</button>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button role="tab" data-tab="check" class="on" data-i="t_check">Check</button>
+  <button role="tab" data-tab="report" data-i="t_report">Report</button>
+  <button role="tab" data-tab="map" data-i="t_map">Scam map</button>
+  <button role="tab" data-tab="learn" data-i="t_learn">Learn</button>
+</nav>
+
+<main>
+<section id="check" class="panel on">
+  <label for="msg" class="big" data-i="paste">Paste the message, link or call details</label>
+  <textarea id="msg" rows="6" data-ip="ph"></textarea>
+  <div class="row">
+    <button id="mic" class="btn ghost" data-i="speak_btn">🎤 Speak it</button>
+    <button id="go" class="btn primary" data-i="check_btn">Check now</button>
+  </div>
+  <p class="hint" data-i="try">Try an example:</p>
+  <div class="chips" id="chips"></div>
+
+  <div id="result" class="result" hidden aria-live="polite">
+    <div class="verdict"><div class="ring"><b id="score">0</b></div>
+      <div><h2 id="vlabel"></h2><p id="vsub" class="muted"></p></div></div>
+    <h3 data-i="why">Why</h3><ul id="reasons"></ul>
+    <h3 data-i="do">What to do</h3><ul id="advice"></ul>
+    <div class="row"><button id="say" class="btn ghost" data-i="listen">🔊 Listen</button>
+      <button id="toReport" class="btn ghost" data-i="report_it">Report this</button></div>
+  </div>
+  <p class="foot">☎ 1930 · cybercrime.gov.in</p>
+</section>
+
+<section id="report" class="panel">
+  <h2 data-i="rep_h">Report a scam in 1 minute</h2>
+  <p class="muted" data-i="rep_p">We write the complaint for you. You submit it at cybercrime.gov.in or call 1930.</p>
+  <label data-i="city">Your city / district</label>
+  <select id="rCity">{% for c in cities %}<option>{{ c }}</option>{% endfor %}</select>
+  <label data-i="kind">Type of scam</label>
+  <select id="rCat">{% for c in categories %}<option value="{{ c }}">{{ c.replace('_',' ') }}</option>{% endfor %}</select>
+  <label data-i="amount">Money lost (₹, 0 if none)</label>
+  <input id="rAmt" type="number" min="0" value="0" inputmode="numeric">
+  <label data-i="suspect">Scammer's number / UPI ID / link</label>
+  <input id="rSus" type="text">
+  <label data-i="what">What happened?</label>
+  <textarea id="rTxt" rows="4"></textarea>
+  <button id="rGo" class="btn primary wide" data-i="make">Create complaint</button>
+  <div id="rOut" hidden>
+    <textarea id="rLetter" rows="12" readonly></textarea>
+    <div class="row"><button id="copy" class="btn ghost" data-i="copy">Copy</button>
+      <a class="btn primary" href="https://cybercrime.gov.in" target="_blank" rel="noopener" data-i="portal">Open portal</a>
+      <a class="btn ghost" href="tel:1930">☎ 1930</a></div>
+  </div>
+</section>
+
+<section id="map" class="panel">
+  <h2 data-i="map_h">Where scams are happening</h2>
+  <div class="stats" id="stats"></div>
+  <div id="mapbox"></div>
+  <p class="hint" data-i="map_n">Sample data is shown with citizen reports. Panchayats, colleges and police can use this to plan awareness drives.</p>
+  <div id="top"></div>
+</section>
+
+<section id="learn" class="panel">
+  <h2 data-i="quiz_h">Spot the scam – quick quiz</h2>
+  <div id="quiz"></div>
+</section>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

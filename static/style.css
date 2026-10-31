@@ -1,0 +1,43 @@
+:root{--ink:#14213D;--ink2:#2B3A5C;--gold:#FCA311;--bg:#F1F4F8;--card:#fff;--line:#D5DCE6;--red:#C62828;--amb:#D98200;--grn:#1B7F3B;--txt:#14213D;--mut:#5A6780}
+@media(prefers-color-scheme:dark){:root{--bg:#0C1424;--card:#16213A;--line:#2C3A5A;--txt:#EEF2F8;--mut:#9DABC6}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:17px/1.55 "Noto Sans Devanagari","Segoe UI",system-ui,sans-serif}
+.top{background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 16px}
+.brand{display:flex;gap:12px;align-items:center}.mark{font-size:32px}
+h1{margin:0;font-size:1.25rem}.top p{margin:0;font-size:.85rem;opacity:.8}
+.lang{background:var(--gold);color:var(--ink);border:0;border-radius:999px;padding:8px 16px;font:inherit;font-weight:700;cursor:pointer}
+.tabs{display:flex;background:var(--ink2);position:sticky;top:0;z-index:5}
+.tabs button{flex:1;background:none;border:0;color:#cdd6e6;padding:13px 4px;font:inherit;font-size:.95rem;border-bottom:4px solid transparent;cursor:pointer}
+.tabs button.on{color:#fff;border-color:var(--gold);font-weight:700}
+main{max-width:720px;margin:0 auto;padding:16px}
+.panel{display:none}.panel.on{display:block}
+label{display:block;margin:14px 0 6px;font-weight:600}label.big{font-size:1.15rem;margin-top:4px}
+textarea,input,select{width:100%;padding:12px;border:2px solid var(--line);border-radius:10px;background:var(--card);color:var(--txt);font:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.row{display:flex;gap:10px;margin:12px 0;flex-wrap:wrap}
+.btn{flex:1;min-width:120px;text-align:center;text-decoration:none;border-radius:12px;padding:14px 16px;font:inherit;font-weight:700;border:2px solid var(--ink);cursor:pointer;color:var(--txt);background:transparent}
+.btn.primary{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn.ghost{background:var(--card)}.btn.wide{width:100%;margin-top:16px}.btn.rec{background:var(--red);color:#fff;border-color:var(--red)}
+.hint,.muted{color:var(--mut);font-size:.92rem;margin:6px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:999px;padding:7px 12px;font:inherit;font-size:.88rem;cursor:pointer}
+.result{margin-top:18px;background:var(--card);border-radius:16px;padding:16px;border:2px solid var(--line)}
+.result.SCAM{border-color:var(--red)}.result.SUSPICIOUS{border-color:var(--amb)}.result.LIKELY_SAFE{border-color:var(--grn)}
+.verdict{display:flex;gap:14px;align-items:center}
+.ring{--c:var(--grn);--p:0;width:84px;height:84px;border-radius:50%;display:grid;place-items:center;flex:none;background:conic-gradient(var(--c) calc(var(--p)*1%),var(--line) 0);position:relative}
+.ring::after{content:"";position:absolute;inset:9px;background:var(--card);border-radius:50%}
+.ring b{position:relative;z-index:1;font-size:1.5rem}
+.SCAM .ring{--c:var(--red)}.SUSPICIOUS .ring{--c:var(--amb)}
+.verdict h2{margin:0;font-size:1.5rem}.SCAM h2{color:var(--red)}.SUSPICIOUS h2{color:var(--amb)}.LIKELY_SAFE h2{color:var(--grn)}
+h3{margin:16px 0 4px;font-size:1rem}ul{margin:0;padding-left:20px}li{margin:5px 0}
+.foot{text-align:center;color:var(--mut);margin-top:22px;font-size:.9rem}
+#mapbox{height:340px;border-radius:14px;border:2px solid var(--line);margin:10px 0;z-index:1}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stat{background:var(--card);border-radius:12px;padding:10px 12px;border:1px solid var(--line)}.stat b{display:block;font-size:1.4rem}
+#top ol{margin:6px 0;padding-left:22px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+.q p{margin:0 0 8px;font-weight:700}.q button{display:block;width:100%;text-align:left;margin:6px 0;padding:11px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--txt);font:inherit;cursor:pointer}
+.q button.ok{border-color:var(--grn);background:#1b7f3b22}.q button.no{border-color:var(--red);background:#c6282822}
+.q .why{display:none;margin-top:6px;color:var(--mut)}.q.done .why{display:block}
+#score-final{text-align:center;font-weight:700;font-size:1.2rem}
+@media(prefers-reduced-motion:no-preference){.result:not([hidden]){animation:pop .25s ease-out}@keyframes pop{from{transform:scale(.97);opacity:.4}}}
